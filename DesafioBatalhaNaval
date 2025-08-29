@@ -30,7 +30,7 @@ int main() {
         printf("(%d, %d)\n", xH, yH + i);
     }
 
-    // Exibindo tabuleiro (opcional, para visualizar)
+    // Exibindo tabuleiro
     printf("\nTabuleiro (1 = parte de navio, 0 = vazio):\n");
     for (int i = 0; i < LINHAS; i++) {
         for (int j = 0; j < COLUNAS; j++) {
