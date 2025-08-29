@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+#define LINHAS 10
+#define COLUNAS 10
+
+int main() {
+    // Tabuleiro inicializado com 0
+    int tabuleiro[LINHAS][COLUNAS] = {0};
+
+    // Variáveis para definir os navios manualmente
+    // Navio vertical
+    int xV = 2, yV = 3; // posição inicial (linha, coluna)
+    int tamanhoV = 4;   // tamanho do navio vertical
+
+    // Navio horizontal
+    int xH = 6, yH = 1; // posição inicial (linha, coluna)
+    int tamanhoH = 3;   // tamanho do navio horizontal
+
+    // Posicionando o navio vertical
+    printf("Navio Vertical (tamanho %d):\n", tamanhoV);
+    for (int i = 0; i < tamanhoV; i++) {
+        tabuleiro[xV + i][yV] = 1; // marca no tabuleiro
+        printf("(%d, %d)\n", xV + i, yV);
+    }
+
+    // Posicionando o navio horizontal
+    printf("\nNavio Horizontal (tamanho %d):\n", tamanhoH);
+    for (int i = 0; i < tamanhoH; i++) {
+        tabuleiro[xH][yH + i] = 1; // marca no tabuleiro
+        printf("(%d, %d)\n", xH, yH + i);
+    }
+
+    // Exibindo tabuleiro (opcional, para visualizar)
+    printf("\nTabuleiro (1 = parte de navio, 0 = vazio):\n");
+    for (int i = 0; i < LINHAS; i++) {
+        for (int j = 0; j < COLUNAS; j++) {
+            printf("%d ", tabuleiro[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
